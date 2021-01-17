@@ -1,0 +1,8 @@
+while wait() do
+   npcs = game:GetService("Workspace").Zhangxu.UINpcNeedAnswer:GetChildren()
+   for i = 1,#npcs do
+       wait(0.5)
+    game:GetService("ReplicatedStorage").System.SpawnCustomer.SpawnCustomer.Communicate:FireServer(tonumber(npcs[i].Name))
+   end
+wait(2)
+end
