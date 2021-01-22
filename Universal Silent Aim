@@ -1,12 +1,12 @@
 -- settings, if you want to change some settings just re-execute.
 _G.whitelist = {
-    "exotic_pand3",
-    "Player2"
+    "Player 1 Name ",
+    "Player 2 Name "
 }
 _G.friendsListIsWhitelisted = true -- change if you don't want to lock onto your friends
 _G.targetPart = "Torso"
 _G.bindEnabled = true
-_G.bind = Enum.KeyCode.T -- use the keycode reference: https://developer.roblox.com/en-us/api-reference/enum/KeyCode, this keydisables aimbot
+_G.bind = Enum.KeyCode.V -- use the keycode reference: https://developer.roblox.com/en-us/api-reference/enum/KeyCode, this keydisables aimbot
 
 _G.FOV = 50
 
