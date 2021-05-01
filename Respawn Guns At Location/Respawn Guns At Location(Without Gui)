@@ -63,7 +63,7 @@ end
 
 end)
 
----2 scripts Combine
+---2 Scripts Combined Just use it Separately 
 
 local stationaryrespawn = false
 local needsrespawning = false
@@ -89,18 +89,15 @@ end
 needsrespawning = true
 end
 
-
 if needsrespawning == true then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end
-
 
 if stationaryrespawn == true then 
 RespawningButton.Text = "Returning"
 else
 RespawningButton.Text = "Not Returning"
 end
-
 
 end)
 
