@@ -1,24 +1,36 @@
-if stationaryrespawn == true and game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-if haspos == false then
-pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-haspos = true
+-- settings
+
+local mutePrints = false
+
+-- functionality
+
+local pr = print
+
+local function print(arg)
+if not mutePrints then
+pr(arg)
+end
 end
 
-needsrespawning = true
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local diedEvent
+local diedpos
+
+local function died()
+diedEvent:Disconnect()
+diedEvent = char:WaitForChild("Humanoid").Died:Connect(died)
+diedpos = char:WaitForChild("HumanoidRootPart").CFrame
 end
 
-if needsrespawning == true then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+local function characterAdded()
+if diedpos then
+char = player.Character or player.CharacterAdded:Wait()
+print("teleporting to "..tostring(diedpos))
+char:WaitForChild("HumanoidRootPart").CFrame = diedpos
+diedEvent = char:WaitForChild("Humanoid").Died:Connect(died)
+end
 end
 
-if stationaryrespawn == true then 
-RespawningButton.Text = "Returning"
-else
-RespawningButton.Text = "Not Returning"
-end
-
-game.Players.LocalPlayer.CharacterAdded:connect(function()
-wait(0.6)
-needsrespawning = false
-haspos = false
-end)
+diedEvent = char:WaitForChild("Humanoid").Died:Connect(died)
+player.CharacterAdded:Connect(characterAdded)
