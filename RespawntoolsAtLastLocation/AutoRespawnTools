@@ -33,15 +33,6 @@ end
 end
 end
 
-
-if autosavetools == true then
-StoringButton.Text = "Storing"
-else
-StoringButton.Text = "Not Storing"
-end
-
-end)
-
 game.Players.LocalPlayer.CharacterAdded:connect(function()
 wait(0.6)
 if autosavetools == true then
