@@ -1,5 +1,8 @@
-local startertools = {}
-local autosavetools = false
+_G.loop = false
+
+while _G.loop do
+   local startertools = {}
+local autosavetools = true
 local toolstosave = {}
 
 for _,v in pairs(game.StarterPack:GetChildren()) do
@@ -53,3 +56,5 @@ end
 end
 
 end)
+   wait() -- delay to prevent crashing
+end
