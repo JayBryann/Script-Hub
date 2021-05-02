@@ -1,0 +1,124 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Prison Life", "DarkTheme")
+
+--Themes:
+--LightTheme
+--DarkTheme
+--GrapeTheme
+--BloodTheme
+--Ocean
+--Midnight
+--Sentinel
+--Synapse
+
+local Tab = Window:NewTab("Welcome")
+
+local Section = Tab:NewSection("Welcome")
+
+Section:NewKeybind("Open/Close Gui", "Open And Closes the Gui", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+end)
+
+local Tab = Window:NewTab("Standard Admin")
+
+local Section = Tab:NewSection("Local Player")
+
+Section:NewSlider("Walk Speed", "Walk Speed Slider", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end);
+
+Section:NewSlider("Jump Speed", "Jump Speed Slider", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end);
+
+Section:NewKeybind("Noclip", "Wall Through Walls", Enum.KeyCode.N, function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Basic%20Admin/Noclip'),true))()
+end);
+
+
+local Section = Tab:NewSection("Infinite Yield")
+
+Section:NewButton("Infinite Yield", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end);
+
+local Section = Tab:NewSection("Auto Respawn Tools")
+
+Section:NewToggle("Keep Weapons", "Weapons Auto Stay In Inventory", function(state)
+    if state then 
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/RespawntoolsAtLastLocation/AutoRespawnTools'),true))() 
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/RespawntoolsAtLastLocation/AutoFalseRespawnTools'),false))() 
+    end
+end);
+
+Section:NewKeybind("Respawn At Death Location", "Respawn Where You Previously ", Enum.KeyCode.N, function()
+    if state then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/RespawnGunsAtLocation/KeepWeaponsOnDeath'),true))()        
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/RespawnGunsAtLocation/KeepWeaponsOnDeath'),false))()
+    end
+end)
+
+local Section = Tab:NewSection("Prison Life LagSwitch")
+
+Section:NewToggle("LagSwitch (Press X)", "Best LagSwitch (Press X)", function(state)
+    if state then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/LagSwitch/PrisonlifeLagSwitch(KeyX)'),true))()
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/LagSwitch/PrisonlifeLagSwitch(KeyX)'),true))()
+    end
+end)
+
+local Section = Tab:NewSection("Postion Lag Switch") 
+
+Section:NewToggle("LagSwitch (Press Z)", "Position Lagswitch(Press Z)", function(state)
+    if state then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/LagSwitch/Position%20Lagswitch'),true))()
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/LagSwitch/Position%20Lagswitch'),true))()
+    end
+end)
+
+local Tab = Window:NewTab("Guis")
+
+local Section = Tab:NewSection("FE Building")
+
+Section:NewButton("Net Bypass", "Might Be Needed to Use FE Building", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/FEBuilding/NetBypass'),true))()
+end);
+
+Section:NewButton("FE Building", "Use Hats As Blocks to Custom FE Build", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/FEBuilding/Main'),true))()
+end);
+
+local Section = Tab:NewSection("PLG")
+
+Section:NewButton("PLG V3.1", "Older Version Of Plg (V3.1)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Gui/Plg%20Backup%20(V3.1)'))()
+end);
+
+local Section = Tab:NewSection("Vynixius")
+
+Section:NewButton("Vynixius", "Gun Mods/Wall Toggle", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Gui/VynixiusBackup'),true))()
+end);
+
+local Section = Tab:NewSection("Unnamed Esp")
+
+Section:NewButton("Unnamed Esp", "Good Custom Esp", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Gui/VynixiusBackup'),true))()
+end);
+
+local Tab = Window:NewTab("Misc")
+
+local Section = Tab:NewSection("Hat Pet Follower")
+-------------------
+Section:NewButton("Single Hat", "Note: Current id is 4584042059.Your Free To Change It", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Misc/Single%20Hat'),true))()
+end);
+-------------------
+Section:NewButton("Hat Lord", "A Lot Of Hats", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/JayBryann/Script-Hub/main/Misc/Hat%20Lord'),true))()
+end);    
