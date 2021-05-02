@@ -1,18 +1,1 @@
-_G.CheckCustomBuilds = true
-_G.DefaulBuilds = true
-_G.Barrier = false
-_G.bridge2 = false
-_G.bridge4 = false
-_G.ladder = true
-_G.Nazi = false
-_G.penis = true
-_G.platform = false
-_G.stairs = false
-_G.BigPP = false
 
-_G.RGB = false
-_G.RGBswitchDelay = .4
-
-_G.RejoinWaitDelayForReExecute = 1  -- tell how long the script will wait before rejoining (for synapse script queing)
-
-loadstring(game:HttpGet("https://ssbtools.netlify.app/assets/storage/LOADSTRING_SCRIPT2.txt"))()
