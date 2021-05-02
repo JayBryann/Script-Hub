@@ -1,0 +1,7 @@
+game:GetService("Players").LocalPlayer.Character.RightHand.Touched:connect(function(obj)
+if obj ~= workspace.Terrain then
+obj.CanCollide = false
+wait(1)
+obj.CanCollide = true
+end
+end)
