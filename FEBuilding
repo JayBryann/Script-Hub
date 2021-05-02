@@ -1,14 +1,14 @@
 _G.CheckCustomBuilds = true
 _G.DefaulBuilds = true
-_G.Barrier = true
-_G.bridge2 = true
-_G.bridge4 = true
+_G.Barrier = false
+_G.bridge2 = false
+_G.bridge4 = false
 _G.ladder = true
-_G.Nazi = true
+_G.Nazi = false
 _G.penis = true
-_G.platform = true
-_G.stairs = true
-_G.BigPP = true
+_G.platform = false
+_G.stairs = false
+_G.BigPP = false
 
 _G.RGB = false
 _G.RGBswitchDelay = .4
